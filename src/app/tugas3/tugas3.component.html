@@ -1,0 +1,26 @@
+<label>Log</label>
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServe($event)">
+  <p>{{ serverName}}</p> -->
+  <br>
+  <!-- <input
+  typr="text"
+  class="form-control"
+  [(ngModel)]="UserName">
+  <p>{{ UserName }}</p> -->
+  
+<button 
+  class="btn btn-primary"
+  
+  (click)="onCreationStatus()">Tampilkan detail</button>
+<!-- <p>{{ serverCreationStatus}}</p> -->
+<!-- <p *ngIf="serverCreated; else noServer">Sever telah dibuat, nama server adalah {{ serverNama }}</p>  -->
+<p *ngIf="i % 2 != 0">{{panggil}}</p>
+<p *ngFor="let i of log;"
+  [ngStyle]="{'backgroundColor': i>=5 ? 'blue':'transparan'}"
+  [ngClass]="{next : i>=5 }" >{{ i }}</p>
+<!-- <ng-template #noServer></ng-template> -->
+<!-- <app-server></app-server> -->
+<app-server *ngFor="let server of servers"></app-server>

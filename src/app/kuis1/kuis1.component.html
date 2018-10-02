@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    
+      
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupporttedContend" aria-controls="navbarSupporttedContend" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupporttedContend">
+            
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">Master Data</a>
+          
+            </div>
+          </div>
+        </nav>
+      
+        <div class="container">
+            <div class="row">
+              <div class="col"><br>
+                  <h3>Form Data Mahasiswa</h3><hr>
+                  <div class="col-md-12">
+                      <label for="nim">NIM</label>
+                      <input type="text" name="nim" id="nim" class="form-control" [(ngModel)]="nim">
+                      <label for="nama">NAMA</label>
+                      <input type="text" name="nama" id="nama" class="form-control"[(ngModel)]="nama">
+                      <label for="kelas">KELAS</label>
+                      <input type="text" name="kelas" id="kelas" class="form-control"[(ngModel)]="kelas">
+                      <br/>
+                      <button class="btn btn-primary" (click)="tambahMhs()">Tambahan Mahasiswa</button>
+                  </div>
+              </div>
+
+              
+              <div class="col-sm" ><br>
+                  <h3>Data Mahasiswa</h3><hr>
+                  <div class="card text-with bg-white mb-3" style="max-width: 20rem;" *ngFor="let mhs of daftarMhs; ">
+
+                      <div class="card-header">
+                          <h3>{{mhs.nama}}</h3>
+                      </div>
+                      <div class="card-body">
+                          <h4>{{mhs.nim}}</h4>
+                          <h3>{{mhs.kelas}}</h3>
+                      
+                      </div>
+                      </div>
+              </div>
+              
+            </div>
+          </div>
+     
+  </div>
+  <hr>
+</div>
